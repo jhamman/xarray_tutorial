@@ -3,4 +3,15 @@ channels:
   - conda-forge
 dependencies:
   - python=3.6
+  - numpy
+  - scipy
+  - pandas
   - xarray
+  - holoviews
+  - geoviews
+  - datashader
+  - dask
+  - distributed
+  - netcdf4
+  - zarr
+  - 
