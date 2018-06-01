@@ -1,0 +1,6 @@
+name: xarray-tutorial
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - xarray
