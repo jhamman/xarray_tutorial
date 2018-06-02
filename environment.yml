@@ -14,3 +14,5 @@ dependencies:
   - distributed
   - netcdf4
   - zarr
+  - pip:
+    - nbserverproxy
