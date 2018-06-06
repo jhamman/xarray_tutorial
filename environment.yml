@@ -13,7 +13,8 @@ dependencies:
   - datashader
   - dask
   - distributed
-  - dask_kubernetes
   - netcdf4
   - zarr
   - nbserverproxy
+  - pip:
+    - dask-kubernetes
