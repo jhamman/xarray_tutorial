@@ -3,13 +3,13 @@
 jupyter serverextension enable --py nbserverproxy --sys-prefix
 
 export DASK_TICK_MAXIMUM_DELAY=5s
-export DASK_DIAGNOSTICS_LINK={JUPYTERHUB_SERVICE_PREFIX}proxy/{port}/status
-export DASK_KUBERNETES_WORKER_TEMPLATE_PATH=${HOME}/worker-template.yaml
-export DASK_KUBERNETES_WORKER_NAME=dask-{JUPYTERHUB_USER}-{uuid}
-
+export DASK_DISTRIBUTED__DIAGNOSTICS_LINK={JUPYTERHUB_SERVICE_PREFIX}proxy/{port}/status
+export DASK_KUBERNETES__WORKER_TEMPLATE_PATH=${HOME}/worker-template.yaml
+export DASK_KUBERNETES__WORKER_NAME=dask-{JUPYTERHUB_USER}-{uuid}
 # set worker image url in worker template
 if [[ -z "${JUPYTER_IMAGE_SPEC}" ]]; then
-  sed -i -e 's/{JUPYTER_IMAGE_SPEC}/${JUPYTER_IMAGE_SPEC}/g' ${DASK_KUBERNETES_WORKER_TEMPLATE_PATH}
+  JUPYTER_IMAGE_SPEC="UNSET"
 fi
+sed -i -e 's|{JUPYTER_IMAGE_SPEC}|${JUPYTER_IMAGE_SPEC}|g' ${DASK_KUBERNETES_WORKER_TEMPLATE_PATH}
 
 #EOF
