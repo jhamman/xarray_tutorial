@@ -11,7 +11,7 @@ spec:
       - 6GB
       - --death-timeout
       - '60'
-    image: {JUPYTER_IMAGE_SPEC}
+    image: WORKER_IMAGE
     name: dask-worker
     resources:
       limits:
