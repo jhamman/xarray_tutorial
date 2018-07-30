@@ -6,3 +6,5 @@ if [[ -z "${JUPYTER_IMAGE_SPEC}" ]]; then
 else
   sed -i -e "s|WORKER_IMAGE|${JUPYTER_IMAGE_SPEC}|g" ${DASK_KUBERNETES__WORKER_TEMPLATE_PATH}
 fi
+
+exec "$@"
