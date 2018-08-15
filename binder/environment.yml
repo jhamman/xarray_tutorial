@@ -16,5 +16,7 @@ dependencies:
   - netcdf4
   - zarr
   - nbserverproxy
+  - jupyter
+  - ipywidgets
   - pip:
-    - dask-kubernetes
+    - git+https://github.com/dask/dask-kubernetes.git
