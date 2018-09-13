@@ -1,4 +1,4 @@
-name: pangeo
+name: xarray
 channels:
   - conda-forge
   - intake
@@ -12,28 +12,18 @@ dependencies:
   - matplotlib
   - dask
   - distributed
-  - gcsfs
-  - intake
-  - intake-xarray
-  - scikit-image
-  - scikit-learn
-  - dask-ml
   - bokeh
   - holoviews
   - geoviews
-  - datashader
   - netcdf4
   - zarr
   - numcodecs
   - python-blosc
   - lz4
   - nbserverproxy
-  - jupyter
+  - jupyterlab
   - ipywidgets
   - graphviz
   - pip:
-    - intake
-    - intake-xarray
-    - graphviz
     - kubernetes
     - git+https://github.com/dask/dask-kubernetes.git
